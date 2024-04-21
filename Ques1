@@ -1,0 +1,24 @@
+#include <stdio.h>
+
+int main() {
+    int num = 2; 
+    int printed = 0; 
+    
+    printf("The first 20 prime numbers are:\n");
+    while (printed < 20) {
+        int prime = 1; 
+        
+        for (int i = 2; i < num; i++) {
+            if (num % i == 0) {
+                prime = 0; 
+                break;
+            }
+        }
+        if (prime) {
+            printf("%d\n", num);
+            printed++;
+        }
+        num++;
+    }
+    return 0;
+}
